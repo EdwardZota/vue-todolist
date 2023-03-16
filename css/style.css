@@ -51,3 +51,75 @@ header img{
     display: flex;
     justify-content: space-between;
 }
+
+.span-text{
+    font-weight: bold;
+}
+
+.color-animation{
+    animation: textcolor  5s infinite linear;
+}
+
+.background-animation{
+    animation: backgroundcolor  5s infinite linear;
+}
+
+@keyframes textcolor{
+    0%{
+        color: red;
+    }
+
+    20%{
+        color: orange;
+    }
+
+    40%{
+        color: yellow;
+    }
+
+    60%{
+        color: green;
+    }
+
+    80%{
+        color: purple;
+    }
+
+    100%{
+        color: red;
+    }
+
+}
+
+@keyframes backgroundcolor{
+    0%{
+        background-color: red;
+        transform: scale(1.2);
+    }
+
+    20%{
+        background-color: orange;
+        transform: scale(1.4);
+    }
+
+    40%{
+        background-color: yellow;
+        transform: scale(1);
+    }
+
+    60%{
+        background-color: green;
+        transform: scale(0.8);
+    }
+
+    80%{
+        background-color: purple;
+        transform: scale(1);
+    }
+
+    100%{
+        background-color: red;
+        transform: scale(1.2);
+    }
+
+}

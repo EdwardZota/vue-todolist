@@ -25,8 +25,10 @@ const { createApp } = Vue
         this.todoList.splice(index,1);
       },
       addTask(){
-        this.todoList.unshift({text:this.newTask,done:false});
-        this.newTask="";
+        if(this.newTask.length > 0){
+          this.todoList.unshift({text:this.newTask,done:false});
+          this.newTask="";
+        }
       },
       doIt(task){
         if(task.done==false){
