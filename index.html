@@ -24,12 +24,11 @@
 
             <div class="taskList">
                 <ul v-if="todoList.length > 0">
-                    <li v-for="(task, index) in todoList">
-                        <span class="span-text" :class="task.done == true?'text-line-through':''">{{task.text}}</span>
+                    <li v-for="(task, index) in todoList" >
+                        <span class="span-text" :class="task.done == true?'text-line-through':''" @click="doIt(task)">{{task.text}}</span>
                         <i class="fa-solid fa-xmark" @click="removeTask(index)"></i>
                     </li>
                 </ul>
-
                 <h2 v-else>Ora puoi andare a giocare!</h2>
             </div>
 

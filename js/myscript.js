@@ -27,6 +27,14 @@ const { createApp } = Vue
       addTask(){
         this.todoList.unshift({text:this.newTask,done:false});
         this.newTask="";
+      },
+      doIt(task){
+        if(task.done==false){
+          task.done = true;
+        }else{
+          task.done = false;
+        }
+        
       }
     }
   }).mount('#app')
