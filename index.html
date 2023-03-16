@@ -24,9 +24,9 @@
 
             <div class="taskList">
                 <ul>
-                    <li v-for="task in todoList">
+                    <li v-for="(task, index) in todoList">
                         <span class="span-text" :class="task.done == true?'text-line-through':''">{{task.text}}</span>
-                        <i class="fa-solid fa-xmark"></i>
+                        <i class="fa-solid fa-xmark" @click="removeTask(index)"></i>
                     </li>
                 </ul>
             </div>
