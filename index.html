@@ -24,8 +24,8 @@
 
             <div class="taskList">
                 <ul>
-                    <li>
-                        <span class="span-text">text</span>
+                    <li v-for="task in todoList">
+                        <span class="span-text" :class="task.done == true?'text-line-through':''">{{task.text}}</span>
                         <i class="fa-solid fa-xmark"></i>
                     </li>
                 </ul>

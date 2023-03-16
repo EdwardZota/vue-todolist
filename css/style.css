@@ -8,6 +8,10 @@
     text-align: center;
 }
 
+.text-line-through{
+    text-decoration: line-through;
+}
+
 .container{
     width: 1170px;
     margin: auto;

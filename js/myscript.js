@@ -10,7 +10,7 @@ const { createApp } = Vue
           },
           {
             text:'testo2',
-            done:false
+            done:true
           },
           {
             text:'testo3',
