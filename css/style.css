@@ -40,11 +40,9 @@ header img{
 .taskList{
     background-color: lightgrey;
     margin-top: 20px;
-}
-
-.taskList ul{
     padding: 20px;
 }
+
 
 .taskList li{
     list-style: none;

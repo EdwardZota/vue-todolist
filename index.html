@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TITOLO</title>
+    <title>To Do List</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -18,17 +18,19 @@
         <main class="container">
 
             <div class="newTask text-center">
-                <input type="text" placeholder="Inserisci qui la nuova task!">
-                <button>Aggiungi</button>
+                <input type="text" placeholder="Inserisci qui la nuova task!" v-model="newTask" @keyup.enter="addTask">
+                <button @click="addTask">Aggiungi</button>
             </div>
 
             <div class="taskList">
-                <ul>
+                <ul v-if="todoList.length > 0">
                     <li v-for="(task, index) in todoList">
                         <span class="span-text" :class="task.done == true?'text-line-through':''">{{task.text}}</span>
                         <i class="fa-solid fa-xmark" @click="removeTask(index)"></i>
                     </li>
                 </ul>
+
+                <h2 v-else>Ora puoi andare a giocare!</h2>
             </div>
 
 
